@@ -4,7 +4,7 @@
         <input type="text" class="form-control vertical-spacing-5" placeholder="{{availableFilterPlaceholder}}"
                formControlName="availableSearchInput" />
         <select class="form-control list-box" formControlName="availableListBox" multiple>
-            <option *ngFor="let item of availableItems | arrayFilter:['text', searchTermAvailable] | arraySort:['text', 'ASC'];trackBy:trackByValue"
+            <option *ngFor="let item of availableItems | arrayFilter:['text', searchTermAvailable];trackBy:trackByValue"
                     [value]="item?.value"
                     (dblclick)="moveAvailableItemToSelected(item)">{{item?.text}}</option>
         </select>
