@@ -40,7 +40,7 @@
         <input type="text" class="form-control vertical-spacing-5" placeholder="{{selectedFilterPlaceholder}}"
                formControlName="selectedSearchInput" />
         <select class="form-control list-box" formControlName="selectedListBox" multiple>
-            <option *ngFor="let item of selectedItems | arrayFilter:['text', searchTermSelected] | arraySort:['text', 'ASC'];trackBy:trackByValue"
+            <option *ngFor="let item of selectedItems | arrayFilter:['text', searchTermSelected] | arraySort:['text', 'ASC' ];trackBy:trackByValue"
                     [value]="item?.value"
                     (dblclick)="moveSelectedItemToAvailable(item)">{{item?.text}}</option>
         </select>
